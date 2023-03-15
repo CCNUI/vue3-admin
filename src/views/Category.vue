@@ -4,10 +4,10 @@
       <div class="header">
         <el-button type="primary" :icon="Plus" @click="handleAdd">增加</el-button>
         <el-popconfirm
-          title="确定删除吗？"
-          confirmButtonText='确定'
-          cancelButtonText='取消'
-          @confirm="handleDelete"
+            cancelButtonText='取消'
+            confirmButtonText='确认'
+            title="确认删除吗？"
+            @confirm="handleDelete"
         >
           <template #reference>
             <el-button type="danger" :icon="Delete">批量删除</el-button>
@@ -28,20 +28,20 @@
       >
       </el-table-column>
       <el-table-column
-        prop="categoryName"
-        label="分类名称"
+          label="类目名称"
+          prop="categoryName"
       >
       </el-table-column>
       <el-table-column
-        prop="categoryRank"
-        label="排序值"
-        width="120"
+          label="序号"
+          prop="categoryRank"
+          width="120"
       >
       </el-table-column>
       <el-table-column
-        prop="createTime"
-        label="添加时间"
-        width="200"
+          label="新增时间戳"
+          prop="createTime"
+          width="200"
       >
       </el-table-column>
       <el-table-column
@@ -52,10 +52,10 @@
           <a style="cursor: pointer; margin-right: 10px" @click="handleEdit(scope.row.categoryId)">修改</a>
           <a style="cursor: pointer; margin-right: 10px" @click="handleNext(scope.row)">下级分类</a>
           <el-popconfirm
-            title="确定删除吗？"
-            confirmButtonText='确定'
-            cancelButtonText='取消'
-            @confirm="handleDeleteOne(scope.row.categoryId)"
+              cancelButtonText='取消'
+              confirmButtonText='确认'
+              title="确认删除吗？"
+              @confirm="handleDeleteOne(scope.row.categoryId)"
           >
             <template #reference>
               <a style="cursor: pointer">删除</a>
@@ -106,7 +106,7 @@ watchEffect(() => {
   console.log(state.pageSize)
 })
 const unwatch = router.afterEach((to) => {
-  // 每次路由变化的时候，都会触发监听时间，重新获取列表数据
+  // 每次路由变化的时候，都会触发监听时间戳，重新获取列表数据
   if (['category', 'level2', 'level3'].includes(to.name)) {
     getCategory()
   }
@@ -114,7 +114,7 @@ const unwatch = router.afterEach((to) => {
 onUnmounted(() => {
   unwatch()
 })
-// 获取分类列表
+// 获取类目列表
 const getCategory = () => {
   const { level = 1, parent_id = 0 } = route.query
   state.loading = true
@@ -152,12 +152,12 @@ const handleNext = (item) => {
     }
   })
 }
-// 添加分类
+// 新增类目
 const handleAdd = () => {
   state.type = 'add'
   addCate.value.open()
 }
-// 修改分类
+// 修改类目
 const handleEdit = (id) => {
   state.type = 'edit'
   addCate.value.open(id)

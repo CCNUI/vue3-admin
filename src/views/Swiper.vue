@@ -4,13 +4,13 @@
       <div class="header">
         <el-button type="primary" :icon="Plus" @click="handleAdd">增加</el-button>
         <el-popconfirm
-          title="确定删除吗？"
-          confirmButtonText='确定'
-          cancelButtonText='取消'
-          @confirm="handleDelete"
+            cancelButtonText='取消'
+            confirmButtonText='确认'
+            title="确认删除吗？"
+            @confirm="handleDelete"
         >
           <template #reference>
-            <el-button type="danger" :icon="Delete">批量删除</el-button>
+            <el-button :icon="Delete" type="danger">多选</el-button>
           </template>
         </el-popconfirm>
       </div>
@@ -35,22 +35,22 @@
         </template>
       </el-table-column>
       <el-table-column
-        label="跳转链接"
+          label="商品链接"
         >
         <template #default="scope">
           <a target="_blank" :href="scope.row.redirectUrl">{{ scope.row.redirectUrl }}</a>
         </template>
       </el-table-column>
       <el-table-column
-        prop="carouselRank"
-        label="排序值"
-        width="120"
+          label="序号"
+          prop="carouselRank"
+          width="120"
       >
       </el-table-column>
       <el-table-column
-        prop="createTime"
-        label="添加时间"
-        width="200"
+          label="新增时间戳"
+          prop="createTime"
+          width="200"
       >
       </el-table-column>
     </el-table>
@@ -102,7 +102,7 @@ const getCarousels = () => {
     state.loading = false
   })
 }
-// 添加轮播项
+// 新增轮播项
 const handleAdd = () => {
   console.log('addSwiper', addSwiper.value)
   state.type = 'add'

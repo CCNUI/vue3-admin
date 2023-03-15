@@ -1,8 +1,8 @@
 <template>
   <el-dialog
-    :title="type == 'add' ? '添加轮播图' : '修改轮播图'"
-    v-model="state.visible"
-    width="400px"
+      v-model="state.visible"
+      :title="type == 'add' ? '新增轮播图' : '修改轮播图'"
+      width="400px"
   >
     <el-form :model="state.ruleForm" :rules="state.rules" ref="formRef" label-width="100px" class="good-form">
       <el-form-item label="图片" prop="url">
@@ -21,10 +21,10 @@
           <el-icon v-else class="avatar-uploader-icon"><Plus /></el-icon>
         </el-upload>
       </el-form-item>
-      <el-form-item label="跳转链接" prop="link">
+      <el-form-item label="商品链接" prop="link">
         <el-input type="text" v-model="state.ruleForm.link"></el-input>
       </el-form-item>
-      <el-form-item label="排序值" prop="sort">
+      <el-form-item label="序号" prop="sort">
         <el-input type="number" v-model="state.ruleForm.sort"></el-input>
       </el-form-item>
     </el-form>
@@ -117,7 +117,7 @@ const submitForm = () => {
           redirectUrl: state.ruleForm.link,
           carouselRank: state.ruleForm.sort
         }).then(() => {
-          ElMessage.success('添加成功')
+          ElMessage.success('新增成功')
           state.visible = false
           if (props.reload) props.reload()
         })

@@ -22,7 +22,12 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="/"><el-icon><Odometer /></el-icon>首页</el-menu-item>
-              <el-menu-item index="/add"><el-icon><Plus /></el-icon>添加商品</el-menu-item>
+              <el-menu-item index="/add">
+                <el-icon>
+                  <Plus/>
+                </el-icon>
+                新增商品
+              </el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
            <el-sub-menu index="2">
@@ -31,9 +36,19 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="/swiper"><el-icon><Picture /></el-icon>轮播图配置</el-menu-item>
-              <el-menu-item index="/hot"><el-icon><StarFilled /></el-icon>热销商品配置</el-menu-item>
+              <el-menu-item index="/hot">
+                <el-icon>
+                  <StarFilled/>
+                </el-icon>
+                爆款好物配置
+              </el-menu-item>
               <el-menu-item index="/new"><el-icon><Sell /></el-icon>新品上线配置</el-menu-item>
-              <el-menu-item index="/recommend"><el-icon><ShoppingCart /></el-icon>为你推荐配置</el-menu-item>
+              <el-menu-item index="/recommend">
+                <el-icon>
+                  <ShoppingCart/>
+                </el-icon>
+                私人推荐配置
+              </el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
           <el-sub-menu index="3">
@@ -41,9 +56,19 @@
               <span>模块管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="/category"><el-icon><Menu /></el-icon>分类管理</el-menu-item>
+              <el-menu-item index="/category">
+                <el-icon>
+                  <Menu/>
+                </el-icon>
+                类目管理
+              </el-menu-item>
               <el-menu-item index="/good"><el-icon><Goods /></el-icon>商品管理</el-menu-item>
-              <el-menu-item index="/guest"><el-icon><User /></el-icon>会员管理</el-menu-item>
+              <el-menu-item index="/guest">
+                <el-icon>
+                  <User/>
+                </el-icon>
+                用户管理
+              </el-menu-item>
               <el-menu-item index="/order"><el-icon><List /></el-icon>订单管理</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
@@ -86,6 +111,10 @@ const state = reactive({
   currentPath: '/',
 })
 
+router.afterEach((to, from) => {
+  state.showMenu = !noMenu.includes(to.path)
+})
+
 router.beforeEach((to, from, next) => {
   if (to.path == '/login') {
     // 如果路径是 /login 则正常执行
@@ -100,7 +129,6 @@ router.beforeEach((to, from, next) => {
       next()
     }
   }
-  state.showMenu = !noMenu.includes(to.path)
   state.currentPath = to.path
   document.title = pathMap[to.name]
 })

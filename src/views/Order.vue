@@ -62,8 +62,8 @@
         </template>
       </el-table-column>
       <el-table-column
-        prop="createTime"
-        label="创建时间"
+          label="创建时间戳"
+          prop="createTime"
       >
       </el-table-column>
       <el-table-column
@@ -71,33 +71,33 @@
       >
         <template #default="scope">
           <el-popconfirm
-            v-if="scope.row.orderStatus == 1"
-            title="确定配货完成吗？"
-            @confirm="handleConfig(scope.row.orderId)"
-            confirm-button-text="确定"
-            cancel-button-text="取消"
+              v-if="scope.row.orderStatus == 1"
+              cancel-button-text="取消"
+              confirm-button-text="确认"
+              title="确认配货完成吗？"
+              @confirm="handleConfig(scope.row.orderId)"
           >
             <template #reference>
               <a style="cursor: pointer; margin-right: 10px">配货完成</a>
             </template>
           </el-popconfirm>
           <el-popconfirm
-            v-if="scope.row.orderStatus == 2"
-            title="确定出库吗？"
-            @confirm="handleSend(scope.row.orderId)"
-            confirm-button-text="确定"
-            cancel-button-text="取消"
+              v-if="scope.row.orderStatus == 2"
+              cancel-button-text="取消"
+              confirm-button-text="确认"
+              title="确认出库吗？"
+              @confirm="handleSend(scope.row.orderId)"
           >
             <template #reference>
               <a style="cursor: pointer; margin-right: 10px">出库</a>
             </template>
           </el-popconfirm>
           <el-popconfirm
-            v-if="!(scope.row.orderStatus == 4 || scope.row.orderStatus < 0)"
-            title="确定关闭订单吗？"
-            @confirm="handleClose(scope.row.orderId)"
-            confirm-button-text="确定"
-            cancel-button-text="取消"
+              v-if="!(scope.row.orderStatus == 4 || scope.row.orderStatus < 0)"
+              cancel-button-text="取消"
+              confirm-button-text="确认"
+              title="确认关闭订单吗？"
+              @confirm="handleClose(scope.row.orderId)"
           >
             <template #reference>
               <a style="cursor: pointer; margin-right: 10px">关闭订单</a>

@@ -27,20 +27,20 @@ export const uploadImgServer = 'http://backend-api-02.newbee.ltd/manage-api/v1/u
 export const uploadImgsServer = 'http://backend-api-02.newbee.ltd/manage-api/v1/upload/files'
 
 export const pathMap = {
-  login: '登录',
-  introduce: '系统介绍',
-  dashboard: '大盘数据',
-  add: '添加商品',
-  swiper: '轮播图配置',
-  hot: '热销商品配置',
-  new: '新品上线配置',
-  recommend: '为你推荐配置',
-  category: '分类管理',
-  level2: '分类二级管理',
-  level3: '分类三级管理',
-  good: '商品管理',
-  guest: '会员管理',
+  login: '用户登录',
+  introduce: '系统说明',
+  dashboard: '总体数据',
+  add: '商品上新',
+  swiper: '轮播图设置',
+  hot: '爆款好物设置',
+  new: '新品发布设置',
+  recommend: '私人推荐设置',
+  category: '商品类目管理',
+  level2: '二级分类管理',
+  level3: '三级分类管理',
+  good: '管理商品信息',
+  guest: '用户管理',
   order: '订单管理',
-  order_detail: '订单详情',
-  account: '修改账户'
+  order_detail: '订单信息',
+  account: '更新账户信息'
 }

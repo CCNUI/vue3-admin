@@ -2,15 +2,15 @@
   <el-card class="index-container">
     <template #header>
       <div class="header">
-        <el-button type="primary" :icon="Plus" @click="handleAdd">增加</el-button>
+        <el-button :icon="Plus" type="primary" @click="handleAdd">新增</el-button>
         <el-popconfirm
-          title="确定删除吗？"
-          confirmButtonText='确定'
-          cancelButtonText='取消'
-          @confirm="handleDelete"
+            cancelButtonText='取消'
+            confirmButtonText='确认'
+            title="确认删除吗？"
+            @confirm="handleDelete"
         >
           <template #reference>
-            <el-button type="danger" :icon="Delete">批量删除</el-button>
+            <el-button :icon="Delete" type="danger">多选删除</el-button>
           </template>
         </el-popconfirm>
       </div>
@@ -27,21 +27,21 @@
         width="55">
       </el-table-column>
       <el-table-column
-        prop="configName"
-        label="商品名称"
+          label="商品标题"
+          prop="configName"
       >
       </el-table-column>
       <el-table-column
-        label="跳转链接"
+          label=""
         >
         <template #default="scope">
           <a target="_blank" :href="scope.row.redirectUrl">{{ scope.row.redirectUrl }}</a>
         </template>
       </el-table-column>
       <el-table-column
-        prop="configRank"
-        label="排序值"
-        width="120"
+          label="序号"
+          prop="configRank"
+          width="120"
       >
       </el-table-column>
       <el-table-column
@@ -51,22 +51,22 @@
       >
       </el-table-column>
       <el-table-column
-        prop="createTime"
-        label="添加时间"
-        width="200"
+          label="新增时间戳"
+          prop="createTime"
+          width="200"
       >
       </el-table-column>
       <el-table-column
-        label="操作"
-        width="100"
+          label="提交"
+          width="100"
       >
         <template #default="scope">
           <a style="cursor: pointer; margin-right: 10px" @click="handleEdit(scope.row.configId)">修改</a>
           <el-popconfirm
-            title="确定删除吗？"
-            confirmButtonText='确定'
-            cancelButtonText='取消'
-            @confirm="handleDeleteOne(scope.row.configId)"
+              cancelButtonText='取消'
+              confirmButtonText='确认'
+              title="确认删除吗？"
+              @confirm="handleDeleteOne(scope.row.configId)"
           >
             <template #reference>
               <a style="cursor: pointer">删除</a>
@@ -114,7 +114,7 @@ const state = reactive({
   currentPage: 1, // 当前页
   pageSize: 10, // 分页大小
   type: 'add', // 操作类型
-  configType: 3 // 3-(首页)热销商品 4-(首页)新品上线 5-(首页)为你推荐
+  configType: 3 // 3-(首页)爆款好物 4-(首页)新品发布 5-(首页)私人推荐
 })
 // 监听路由变化
 router.beforeEach((to) => {
@@ -129,7 +129,7 @@ onMounted(() => {
   state.configType = configTypeMap[route.name]
   getIndexConfig()
 })
-// 首页热销商品列表
+// 首页爆款好物列表
 const getIndexConfig = () => {
   state.loading = true
   axios.get('/indexConfigs', {
@@ -145,7 +145,7 @@ const getIndexConfig = () => {
     state.loading = false
   })
 }
-// 添加商品
+// 新增商品
 const handleAdd = () => {
   state.type = 'add'
   addGood.value.open()

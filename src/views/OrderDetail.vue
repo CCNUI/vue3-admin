@@ -14,7 +14,7 @@
       <el-card class="data-item" shadow="hover">
         <template #header>
           <div class="card-header">
-            <span>创建时间</span>
+            <span>创建时间戳</span>
           </div>
         </template>
         <div>

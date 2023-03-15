@@ -2,8 +2,8 @@
   <el-card class="guest-container">
     <template #header>
       <div class="header">
-        <el-button type="primary" :icon="Plus" @click="handleSolve">解除禁用</el-button>
-        <el-button type="danger" :icon="Delete" @click="handleForbid">禁用账户</el-button>
+        <el-button :icon="Plus" type="primary" @click="handleSolve">解禁</el-button>
+        <el-button :icon="Delete" type="danger" @click="handleForbid">禁用</el-button>
       </div>
     </template>
     <Table
@@ -16,17 +16,17 @@
           width="55">
         </el-table-column>
         <el-table-column
-          prop="nickName"
-          label="昵称"
+            label="用户名"
+            prop="nickName"
         >
         </el-table-column>
         <el-table-column
-          prop="loginName"
-          label="登录名"
+            label="用户名"
+            prop="loginName"
         >
         </el-table-column>
         <el-table-column
-          label="身份状态"
+            label="用户状态"
         >
           <template #default="scope">
             <span :style="scope.row.lockedFlag == 0 ? 'color: green;' : 'color: red;'">
@@ -35,17 +35,17 @@
           </template>
         </el-table-column>
         <el-table-column
-          label="是否注销"
+            label="是否禁用"
         >
           <template #default="scope">
             <span :style="scope.row.lockedFlag == 0 ? 'color: green;' : 'color: red;'">
-              {{ scope.row.isDeleted == 0 ? '正常' : '注销' }}
+              {{ scope.row.isDeleted == 0 ? '正常' : '禁用' }}
             </span>
           </template>
         </el-table-column>
         <el-table-column
-          prop="createTime"
-          label="注册时间"
+            label="禁用时间戳"
+            prop="createTime"
         >
         </el-table-column>
       </template>

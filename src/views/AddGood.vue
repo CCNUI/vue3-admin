@@ -2,36 +2,41 @@
   <div class="add">
     <el-card class="add-container">
       <el-form :model="state.goodForm" :rules="state.rules" ref="goodRef" label-width="100px" class="goodForm">
-        <el-form-item required label="商品分类">
-          <el-cascader :placeholder="state.defaultCate" style="width: 300px" :props="state.category" @change="handleChangeCate"></el-cascader>
+        <el-form-item label="商品类目" required>
+          <el-cascader :placeholder="state.defaultCate" :props="state.category" style="width: 300px"
+                       @change="handleChangeCate"></el-cascader>
         </el-form-item>
-        <el-form-item label="商品名称" prop="goodsName">
+        <el-form-item label="商品标题" prop="goodsName">
           <el-input style="width: 300px" v-model="state.goodForm.goodsName" placeholder="请输入商品名称"></el-input>
         </el-form-item>
-        <el-form-item label="商品简介" prop="goodsIntro">
-          <el-input style="width: 300px" type="textarea" v-model="state.goodForm.goodsIntro" placeholder="请输入商品简介(100字)"></el-input>
+        <el-form-item label="商品描述" prop="goodsIntro">
+          <el-input v-model="state.goodForm.goodsIntro" placeholder="请输入商品简介(100字)" style="width: 300px"
+                    type="textarea"></el-input>
         </el-form-item>
-        <el-form-item label="商品价格" prop="originalPrice">
-          <el-input type="number" min="0" style="width: 300px" v-model="state.goodForm.originalPrice" placeholder="请输入商品价格"></el-input>
+        <el-form-item label="商品原价" prop="originalPrice">
+          <el-input v-model="state.goodForm.originalPrice" min="0" placeholder="请输入商品价格" style="width: 300px"
+                    type="number"></el-input>
         </el-form-item>
-        <el-form-item label="商品售卖价" prop="sellingPrice">
-          <el-input type="number" min="0" style="width: 300px" v-model="state.goodForm.sellingPrice" placeholder="请输入商品售价"></el-input>
+        <el-form-item label="商品售价" prop="sellingPrice">
+          <el-input v-model="state.goodForm.sellingPrice" min="0" placeholder="请输入商品售价" style="width: 300px"
+                    type="number"></el-input>
         </el-form-item>
-        <el-form-item label="商品库存" prop="stockNum">
-          <el-input type="number" min="0" style="width: 300px" v-model="state.goodForm.stockNum" placeholder="请输入商品库存"></el-input>
+        <el-form-item label="库存量" prop="stockNum">
+          <el-input v-model="state.goodForm.stockNum" min="0" placeholder="请输入商品库存" style="width: 300px"
+                    type="number"></el-input>
         </el-form-item>
-        <el-form-item label="商品标签" prop="tag">
-          <el-input style="width: 300px" v-model="state.goodForm.tag" placeholder="请输入商品小标签"></el-input>
+        <el-form-item label="商品类目" prop="tag">
+          <el-input v-model="state.goodForm.tag" placeholder="请输入商品的类目" style="width: 300px"></el-input>
         </el-form-item>
-        <el-form-item label="上架状态" prop="goodsSellStatus">
+        <el-form-item label="当前状态" prop="goodsSellStatus">
           <el-radio-group v-model="state.goodForm.goodsSellStatus">
-            <el-radio label="0">上架</el-radio>
-            <el-radio label="1">下架</el-radio>
+            <el-radio label="0">销售中</el-radio>
+            <el-radio label="1">已下架</el-radio>
           </el-radio-group>
         </el-form-item>
         <el-form-item required label="商品主图" prop="goodsCoverImg">
           <el-upload
-            class="avatar-uploader"
+              class="avatar-uploader"
             :action="state.uploadImgServer"
             accept="jpg,jpeg,png"
             :headers="{
@@ -204,8 +209,8 @@ const submitAdd = () => {
         httpOption = axios.put
       }
       httpOption('/goods', params).then(() => {
-        ElMessage.success(id ? '修改成功' : '添加成功')
-        router.push({ path: '/good' })
+        ElMessage.success(id ? '修改成功' : '新增成功')
+        router.push({path: '/good'})
       })
     }
   })

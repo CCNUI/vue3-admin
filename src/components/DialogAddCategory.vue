@@ -1,14 +1,14 @@
 <template>
   <el-dialog
-    :title="state.type == 'add' ? '添加分类' : '修改分类'"
-    v-model="state.visible"
-    width="400px"
+      v-model="state.visible"
+      :title="state.type == 'add' ? '新增类目' : '修改类目'"
+      width="400px"
   >
     <el-form :model="state.ruleForm" :rules="state.rules" ref="formRef" label-width="100px" class="good-form">
       <el-form-item label="商品名称" prop="name">
         <el-input type="text" v-model="state.ruleForm.name"></el-input>
       </el-form-item>
-      <el-form-item label="排序值" prop="rank">
+      <el-form-item label="序号" prop="rank">
         <el-input type="number" v-model="state.ruleForm.rank"></el-input>
       </el-form-item>
     </el-form>
@@ -28,8 +28,8 @@ import axios from '@/utils/axios'
 import { ElMessage } from 'element-plus'
 
 const props = defineProps({
-  type: String, // 用于判断是添加还是编辑
-  reload: Function // 添加或修改完后，刷新列表页
+  type: String, // 用于判断是新增还是编辑
+  reload: Function // 新增或修改完后，刷新列表页
 })
 
 const formRef = ref(null)
@@ -72,7 +72,7 @@ const open = (id) => {
     getDetail(id)
   } else {
     // 否则为新增模式
-    // 新增类目，从路由获取分类 level 级别和父分类 id
+    // 新增类目，从路由获取类目 level 级别和父类目 id
     const { level = 1, parent_id = 0 } = route.query
     state.ruleForm = {
       name: '',
@@ -90,14 +90,14 @@ const submitForm = () => {
   formRef.value.validate((valid) => {
     if (valid) {
       if (props.type == 'add') {
-        // 添加方法
+        // 新增方法
         axios.post('/categories', {
           categoryLevel: state.categoryLevel,
           parentId: state.parentId,
           categoryName: state.ruleForm.name,
           categoryRank: state.ruleForm.rank
         }).then(() => {
-          ElMessage.success('添加成功')
+          ElMessage.success('新增成功')
           state.visible = false
           // 接口回调之后，运行重新获取列表方法 reload
           if (props.reload) props.reload()

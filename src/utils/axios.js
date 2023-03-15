@@ -5,11 +5,11 @@ import { localGet } from './index'
 import config from '~/config'
 
 
-// 这边由于后端没有区分测试和正式，姑且都写成一个接口。
+// 暂未区分正式和测试，先写为一个接口哈
 axios.defaults.baseURL = config[import.meta.env.MODE].baseUrl
-// 携带 cookie，对目前的项目没有什么作用，因为我们是 token 鉴权
+// 允许携带 cookie，不过没啥用，项目使用的是 Token 鉴权而不是基于 Cookie 的身份验证方式。
 axios.defaults.withCredentials = true
-// 请求头，headers 信息
+// HTTP请求头部信息。
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
 axios.defaults.headers['token'] = localGet('token') || ''
 // 默认 post 请求，使用 application/json 形式

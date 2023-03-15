@@ -8,9 +8,12 @@ Vue3 + Vite + Vue-Router + Element-Plus + Echarts + Axios 后台管理系统。
 ![Version 3.0.0](https://img.shields.io/badge/version-3.0.0-yellow.svg)
 [![License](https://img.shields.io/badge/license-GPL3.0-blue.svg)](https://github.com/newbee-ltd/newbee-mall-vue3-app/blob/master/LICENSE)
 
-newbee-mall 项目是一套电商系统，基于 Spring Boot 和 Vue 以及相关技术栈开发。 前台商城系统包含首页门户、商品分类、新品上线、首页轮播、商品推荐、商品搜索、商品展示、购物车、订单结算、订单流程、个人订单管理、会员中心、帮助中心等模块。 后台管理系统包含数据面板、轮播图管理、商品管理、订单管理、会员管理、分类管理、设置等模块。
+newbee-mall 项目是一套电商系统，基于 Spring Boot 和 Vue 以及相关技术栈开发。
+前台商城系统包含首页门户、商品类目、新品上线、首页轮播、商品推荐、商品搜索、商品展示、购物车、订单结算、订单流程、个人订单管理、用户中心、帮助中心等模块。
+后台管理系统包含数据面板、轮播图管理、商品管理、订单管理、用户管理、类目管理、设置等模块。
 
-**vue3-admin** **版本线上预览地址：**[http://vue3-admin.newbee.ltd](http://vue3-admin.newbee.ltd)，测试账号密码：admin 123456
+**vue3-admin** **版本线上预览地址：**[http://vue3-admin.newbee.ltd](http://vue3-admin.newbee.ltd)，测试账号密码：admin
+123456
 
 ## newbee-mall （新蜂商城）系列项目概览
 
@@ -55,7 +58,7 @@ newbee-mall 项目是一套电商系统，基于 Spring Boot 和 Vue 以及相�
 - [API 接口开发实战之用户登录接口开发](https://juejin.cn/book/6933939264455442444)
 - [API 接口开发实战之用户身份认证详解](https://juejin.cn/book/6933939264455442444)
 - [API 接口开发实战之轮播图管理模块接口开发](https://juejin.cn/book/6933939264455442444)
-- [API 接口开发实战之商品分类管理模块接口开发](https://juejin.cn/book/6933939264455442444)
+- [API 接口开发实战之商品类目管理模块接口开发](https://juejin.cn/book/6933939264455442444)
 - [API 接口开发实战之商品管理模块接口开发](https://juejin.cn/book/6933939264455442444)
 - [API 接口开发实战之商品配置管理模块接口开发](https://juejin.cn/book/6933939264455442444)
 - [API 接口开发实战之订单管理模块接口开发](https://juejin.cn/book/6933939264455442444)
@@ -65,10 +68,10 @@ newbee-mall 项目是一套电商系统，基于 Spring Boot 和 Vue 以及相�
 - [Vue3 实战之登录鉴权](https://juejin.cn/book/6933939264455442444)
 - [Vue3 实战之首页大盘数据](https://juejin.cn/book/6933939264455442444)
 - [Vue3 实战之首页配置](https://juejin.cn/book/6933939264455442444)
-- [Vue3 实战之分类管理](https://juejin.cn/book/6933939264455442444)
+- [Vue3 实战之类目管理](https://juejin.cn/book/6933939264455442444)
 - [Vue3 实战之商品管理](https://juejin.cn/book/6933939264455442444)
 - [Vue3 实战之订单管理](https://juejin.cn/book/6933939264455442444)
-- [Vue3 实战之会员管理、账户修改](https://juejin.cn/book/6933939264455442444)
+- [Vue3 实战之用户管理、账户修改](https://juejin.cn/book/6933939264455442444)
 - [pm2 实现一键部署云端服务器](https://juejin.cn/book/6933939264455442444)
 - [常见问题汇总讲解](https://juejin.cn/book/6933939264455442444)
 

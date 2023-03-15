@@ -39,7 +39,7 @@ const state = reactive({
   checked: true,
   rules: {
     username: [
-      { required: 'true', message: '账户不能为空', trigger: 'blur' }
+      {required: 'true', message: '用户名为空', trigger: 'blur'}
     ],
     password: [
       { required: 'true', message: '密码不能为空', trigger: 'blur' }

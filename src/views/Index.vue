@@ -4,7 +4,7 @@
       <el-card class="order-item">
         <template #header>
           <div class="card-header">
-            <span>今日订单数</span>
+            <span>日销量</span>
           </div>
         </template>
         <div class="item">1888</div>
@@ -12,7 +12,7 @@
       <el-card class="order-item">
         <template #header>
           <div class="card-header">
-            <span>今日日活</span>
+            <span>热度</span>
           </div>
         </template>
         <div class="item">36271</div>
@@ -20,7 +20,7 @@
       <el-card class="order-item">
         <template #header>
           <div class="card-header">
-            <span>转化率</span>
+            <span>成交率</span>
           </div>
         </template>
         <div class="item">20%</div>
@@ -43,7 +43,7 @@ onMounted(() => {
     // 指定图表的配置项和数据
     const option = {
       title: {
-        text: '系统折线图'
+        text: '系统趋势图'
       },
       tooltip: {
         trigger: 'axis',
@@ -55,7 +55,7 @@ onMounted(() => {
         }
       },
       legend: {
-        data: ['新增注册', '付费用户', '活跃用户', '订单数', '当日总收入']
+        data: ['新加入的用户', '支付用户', '在线用户', '订单总数', '当日收益']
       },
       toolbox: {
         feature: {
@@ -82,9 +82,9 @@ onMounted(() => {
       ],
       series: [
         {
-          name: '新增注册',
+          name: '新加入的用户',
           type: 'line',
-          stack: '总量',
+          stack: '总共',
           areaStyle: {},
           emphasis: {
             focus: 'series'
@@ -94,7 +94,7 @@ onMounted(() => {
         {
           name: '付费用户',
           type: 'line',
-          stack: '总量',
+          stack: '总数',
           areaStyle: {},
           emphasis: {
             focus: 'series'
@@ -102,9 +102,9 @@ onMounted(() => {
           data: [220, 182, 191, 234, 290, 330, 310]
         },
         {
-          name: '活跃用户',
+          name: '在线用户',
           type: 'line',
-          stack: '总量',
+          stack: '总数',
           areaStyle: {},
           emphasis: {
             focus: 'series'
@@ -122,9 +122,9 @@ onMounted(() => {
           data: [320, 332, 301, 334, 390, 330, 320]
         },
         {
-          name: '当日总收入',
+          name: '当日受益',
           type: 'line',
-          stack: '总量',
+          stack: '总数',
           label: {
             show: true,
             position: 'top'
