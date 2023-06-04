@@ -1,34 +1,34 @@
-# vue3-admin
+# QCShop-Admin
 
 Vue3 + Vite + Vue-Router + Element-Plus + Echarts + Axios 后台管理系统。
 
-![vue3-admin-summary](https://13-doc.oss-cn-beijing.aliyuncs.com/images/2022/03/vue3-admin-summary.png)
+![QCShop-Admin-summary](https://13-doc.oss-cn-beijing.aliyuncs.com/images/2022/03/QCShop-Admin-summary.png)
 
 ![Build Status](https://img.shields.io/badge/build-passing-green.svg)
 ![Version 3.0.0](https://img.shields.io/badge/version-3.0.0-yellow.svg)
-[![License](https://img.shields.io/badge/license-GPL3.0-blue.svg)](https://github.com/newbee-ltd/newbee-mall-vue3-app/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-GPL3.0-blue.svg)](https://github.com/CCNUI/newbee-mall-vue3-app/blob/master/LICENSE)
 
 newbee-mall 项目是一套电商系统，基于 Spring Boot 和 Vue 以及相关技术栈开发。
 前台商城系统包含首页门户、商品类目、新品上线、首页轮播、商品推荐、商品搜索、商品展示、购物车、订单结算、订单流程、个人订单管理、用户中心、帮助中心等模块。
 后台管理系统包含数据面板、轮播图管理、商品管理、订单管理、用户管理、类目管理、设置等模块。
 
-**vue3-admin** **版本线上预览地址：**[http://vue3-admin.newbee.ltd](http://vue3-admin.newbee.ltd)，测试账号密码：admin
+**QCShop-Admin** **版本线上预览地址：**[http://QCShop-Admin.newbee.ltd](http://QCShop-Admin.newbee.ltd)，测试账号密码：admin
 123456
 
 ## newbee-mall （新蜂商城）系列项目概览
 
-![newbee-mall-course-2023](https://github.com/newbee-ltd/newbee-mall-cloud/raw/main/static-files/newbee-mall-course-2023.png)
+![newbee-mall-course-2023](https://github.com/CCNUI/newbee-mall-cloud/raw/main/static-files/newbee-mall-course-2023.png)
 
 | 项目名称             | 仓库地址                                                     | 备注                                                         |
 | :------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| newbee-mall          | [newbee-mall in GitHub](https://github.com/newbee-ltd/newbee-mall)<br>[newbee-mall in Gitee](https://gitee.com/newbee-ltd/newbee-mall) | 初始版本、Spring Boot、Thymeleaf、MyBatis、MySQL             |
-| newbee-mall-plus     | [newbee-mall-plus in GitHub](https://github.com/newbee-ltd/newbee-mall-plus)<br/>[newbee-mall-plus in Gitee](https://gitee.com/newbee-ltd/newbee-mall-plus) | 升级版本、优惠券、秒杀、支付、Spring Boot、Thymeleaf、MyBatis、MySQL、Redis |
-| newbee-mall-cloud    | [newbee-mall-cloud in GitHub](https://github.com/newbee-ltd/newbee-mall-cloud)<br/>[newbee-mall-cloud in Gitee](https://gitee.com/newbee-ltd/newbee-mall-cloud) | 微服务版本、分布式事务、Spring Cloud Alibaba、Nacos、Sentinel、OpenFeign、Seata |
-| newbee-mall-api      | [newbee-mall-api in GitHub](https://github.com/newbee-ltd/newbee-mall-api)<br/>[newbee-mall-api in Gitee](https://gitee.com/newbee-ltd/newbee-mall-api) | 前后端分离、Spring Boot、MyBatis、Swagger、MySQL             |
-| newbee-mall-api-go   | [newbee-mall-api-go in GitHub](https://github.com/newbee-ltd/newbee-mall-api-go)<br/>[newbee-mall-api-go in Gitee](https://gitee.com/newbee-ltd/newbee-mall-api-go) | 前后端分离、Go、Gin、MySQL                                   |
-| newbee-mall-vue-app  | [newbee-mall-vue-app in GitHub](https://github.com/newbee-ltd/newbee-mall-vue-app)<br/>[newbee-mall-vue-app in Gitee](https://gitee.com/newbee-ltd/newbee-mall-vue-app) | 前后端分离、Vue2、Vant                                       |
-| newbee-mall-vue3-app | [newbee-mall-vue3-app in GitHub](https://github.com/newbee-ltd/newbee-mall-vue3-app)<br/>[newbee-mall-vue3-app in Gitee](https://gitee.com/newbee-ltd/newbee-mall-vue3-app) | 前后端分离、Vue3、Vue-Router4、Pinia、Vant4                  |
-| vue3-admin           | [vue3-admin in GitHub](https://github.com/newbee-ltd/vue3-admin)<br/>[vue3-admin in Gitee](https://gitee.com/newbee-ltd/vue3-admin) | 前后端分离、Vue3、Element-Plus、Vue-Router4、Vite            |
+| newbee-mall          | [newbee-mall in GitHub](https://github.com/CCNUI/newbee-mall)<br>[newbee-mall in Gitee](https://gitee.com/CCNUI/newbee-mall) | 初始版本、Spring Boot、Thymeleaf、MyBatis、MySQL             |
+| newbee-mall-plus     | [newbee-mall-plus in GitHub](https://github.com/CCNUI/newbee-mall-plus)<br/>[newbee-mall-plus in Gitee](https://gitee.com/CCNUI/newbee-mall-plus) | 升级版本、优惠券、秒杀、支付、Spring Boot、Thymeleaf、MyBatis、MySQL、Redis |
+| newbee-mall-cloud    | [newbee-mall-cloud in GitHub](https://github.com/CCNUI/newbee-mall-cloud)<br/>[newbee-mall-cloud in Gitee](https://gitee.com/CCNUI/newbee-mall-cloud) | 微服务版本、分布式事务、Spring Cloud Alibaba、Nacos、Sentinel、OpenFeign、Seata |
+| newbee-mall-api      | [newbee-mall-api in GitHub](https://github.com/CCNUI/newbee-mall-api)<br/>[newbee-mall-api in Gitee](https://gitee.com/CCNUI/newbee-mall-api) | 前后端分离、Spring Boot、MyBatis、Swagger、MySQL             |
+| newbee-mall-api-go   | [newbee-mall-api-go in GitHub](https://github.com/CCNUI/newbee-mall-api-go)<br/>[newbee-mall-api-go in Gitee](https://gitee.com/CCNUI/newbee-mall-api-go) | 前后端分离、Go、Gin、MySQL                                   |
+| newbee-mall-vue-app  | [newbee-mall-vue-app in GitHub](https://github.com/CCNUI/newbee-mall-vue-app)<br/>[newbee-mall-vue-app in Gitee](https://gitee.com/CCNUI/newbee-mall-vue-app) | 前后端分离、Vue2、Vant                                       |
+| newbee-mall-vue3-app | [newbee-mall-vue3-app in GitHub](https://github.com/CCNUI/newbee-mall-vue3-app)<br/>[newbee-mall-vue3-app in Gitee](https://gitee.com/CCNUI/newbee-mall-vue3-app) | 前后端分离、Vue3、Vue-Router4、Pinia、Vant4                  |
+| QCShop-Admin           | [QCShop-Admin in GitHub](https://github.com/CCNUI/QCShop-Admin)<br/>[QCShop-Admin in Gitee](https://gitee.com/CCNUI/QCShop-Admin) | 前后端分离、Vue3、Element-Plus、Vue-Router4、Vite            |
 
 **坚持不易，如果觉得项目还不错的话可以给项目一个 Star 吧，也是对我一直更新代码的一种鼓励啦，谢谢各位的支持。**
 
@@ -77,12 +77,12 @@ newbee-mall 项目是一套电商系统，基于 Spring Boot 和 Vue 以及相�
 
 ## 联系作者
 
-> 大家有任何问题或者建议都可以在 [issues](https://github.com/newbee-ltd/vue3-admin/issues) 中反馈给我，我会慢慢完善这个项目。
+> 大家有任何问题或者建议都可以在 [issues](https://github.com/CCNUI/QCShop-Admin/issues) 中反馈给我，我会慢慢完善这个项目。
 
 - 我的邮箱：2449207463@qq.com
 - QQ技术交流群：707779034 932227898 552142710
 
-关注公众号：**程序员十三**，回复"勾搭"进群交流。
+关注公众号：**程序员郑博阳**，回复"勾搭"进群交流。
 
 ![wx-gzh](https://newbee-mall.oss-cn-beijing.aliyuncs.com/wx-gzh/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%8D%81%E4%B8%89-%E5%85%AC%E4%BC%97%E5%8F%B7.png)
 
@@ -94,7 +94,7 @@ newbee-mall 项目是一套电商系统，基于 Spring Boot 和 Vue 以及相�
 
 ## 页面展示
 
-以下为 vue3-admin 系统的部分页面预览图：
+以下为 QCShop-Admin 系统的部分页面预览图：
 
 ![preview](https://user-images.githubusercontent.com/10935614/111867147-251df580-89ad-11eb-924f-6140b70a2cc0.png)
 
