@@ -12,10 +12,10 @@ newbee-mall 项目是一套电商系统，基于 Spring Boot 和 Vue 以及相�
 前台商城系统包含首页门户、商品类目、新品上线、首页轮播、商品推荐、商品搜索、商品展示、购物车、订单结算、订单流程、个人订单管理、用户中心、帮助中心等模块。
 后台管理系统包含数据面板、轮播图管理、商品管理、订单管理、用户管理、类目管理、设置等模块。
 
-**QCShop-Admin** **版本线上预览地址：**[http://QCShop-Admin.newbee.ltd](http://QCShop-Admin.newbee.ltd)，测试账号密码：admin
+**QCShop-Admin** **版本线上预览地址：**[http://QCShop-Admin.newbee.ltd](http://QCShop-Admin.newbee.ltd)，测试用户名密码：admin
 123456
 
-## newbee-mall （新蜂商城）系列项目概览
+## newbee-mall （晴川商城）系列项目概览
 
 ![newbee-mall-course-2023](https://github.com/CCNUI/newbee-mall-cloud/raw/main/static-files/newbee-mall-course-2023.png)
 

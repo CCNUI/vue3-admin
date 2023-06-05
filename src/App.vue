@@ -4,7 +4,7 @@
       <el-aside class="aside">
         <div class="head">
           <div>
-            <img src="//s.weituibao.com/1582958061265/mlogo.png" alt="logo">
+            <img src="/src/assets/qc-logo.png" alt="logo">
             <span>晴川商城管理</span>
           </div>
         </div>
